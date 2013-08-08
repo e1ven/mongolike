@@ -1,7 +1,5 @@
-CREATE OR REPLACE FUNCTION runCommand (options varchar) RETURNS
+CREATE OR REPLACE FUNCTION runCommand (options json) RETURNS
 json AS $$
-  options = JSON.parse(options);
-
   var map, reduce, finalize;
   
   if (options.map) {
