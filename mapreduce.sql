@@ -19,7 +19,6 @@ json AS $$
   var emitted = { };
 
   function emit(key, data) {
-    key = JSON.stringify(key);
     if (emitted[key] === undefined) {
       emitted[key] = [ ];
     }
